@@ -147,13 +147,12 @@ nav {
 .hero-title {
   font-family: 'Noto Serif JP', serif;
   font-weight: 900;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.5;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  line-height: 1.55;
   color: var(--green-dark);
   margin-bottom: 18px;
-}
-.hero-title span {
-  color: var(--text);
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 .hero-sub {
   font-size: 1rem;
@@ -567,9 +566,9 @@ footer {
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-badge">習い事教室向け 成長記録ツール</div>
-      <h1 class="hero-title">気づけば、<span>もう一冊の</span><br>アルバムができていた。</h1>
+      <h1 class="hero-title">気づけば、もう一冊の<br>アルバムができていた。</h1>
       <p class="hero-sub">
-        レッスンごとに写真とひとことメモを残すだけ。卒業・進級のとき、素敵なアルバムが自動で完成します。保護者への感動的な贈り物を、日々の積み重ねから。
+        レッスンごとに写真とひとことメモを残すだけ。<br>卒業・進級のとき、素敵なアルバムが自動で完成します。<br>保護者への感動的な贈り物を、日々の積み重ねから。
       </p>
       <div class="hero-cta-group">
         <a href="https://app.gyomu-karugamo.com" class="btn-primary">14日間無料で試す</a>
@@ -645,13 +644,11 @@ footer {
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <div class="step-icon">📅</div>
         <div class="step-title">記録が自動で蓄積</div>
         <div class="step-desc">生徒ごとのタイムラインに記録が積み重なります。あとは任せるだけ。</div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <div class="step-icon">📖</div>
         <div class="step-title">節目に自動でアルバム生成</div>
         <div class="step-desc">卒業・進級のタイミングで、アルバムが自動でできあがります。</div>
       </div>
@@ -662,7 +659,7 @@ footer {
       <div class="how-result-text">
         <div class="how-result-title">保護者に共有リンクを送るだけ</div>
         <div class="how-result-desc">
-          完成したアルバムをPDF・画像・共有リンクで保護者に届けられます。印刷不要。「ちゃんと見てくれていたんだ」という感動を、手軽に届けましょう。
+          完成したアルバムをPDF・画像・共有リンクで保護者に届けられます。<br>印刷不要。「ちゃんと見てくれていたんだ」という感動を、手軽に届けましょう。
         </div>
       </div>
     </div>
@@ -682,25 +679,25 @@ footer {
         <div class="feature-icon">📷</div>
         <div class="feature-num">FEATURE 01</div>
         <div class="feature-title">かんたんレッスン記録</div>
-        <div class="feature-desc">写真をアップロードしてひとことメモを添えるだけ。余計な操作はありません。スマートフォンからでもサッと記録できます。</div>
+        <div class="feature-desc">写真をアップロードしてひとことメモを添えるだけ。<br>余計な操作はありません。スマートフォンからでもサッと記録できます。</div>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📈</div>
         <div class="feature-num">FEATURE 02</div>
         <div class="feature-title">生徒ごとの成長タイムライン</div>
-        <div class="feature-desc">生徒一人ひとりの記録が時系列で並び、いつでも振り返れます。初めての発表会、上達の軌跡がひと目でわかります。</div>
+        <div class="feature-desc">生徒一人ひとりの記録が時系列で並び、いつでも振り返れます。<br>初めての発表会、上達の軌跡がひと目でわかります。</div>
       </div>
       <div class="feature-card">
         <div class="feature-icon">✨</div>
         <div class="feature-num">FEATURE 03</div>
         <div class="feature-title">節目の自動アルバム生成</div>
-        <div class="feature-desc">卒業・進級のタイミングで、蓄積した記録から自動でアルバムを生成。写真の並べ替えや削除程度の軽い編集で完成します。</div>
+        <div class="feature-desc">卒業・進級のタイミングで、蓄積した記録から自動でアルバムを生成。<br>写真の並べ替えや削除程度の軽い編集で完成します。</div>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🔗</div>
         <div class="feature-num">FEATURE 04</div>
         <div class="feature-title">保護者への共有リンク発行</div>
-        <div class="feature-desc">完成したアルバムをPDF・画像・共有リンクで保護者に届けられます。印刷不要。感動をデータで手軽に渡せます。</div>
+        <div class="feature-desc">完成したアルバムをPDF・画像・共有リンクで保護者に届けられます。<br>印刷不要。感動をデータで手軽に渡せます。</div>
       </div>
     </div>
   </div>
@@ -765,7 +762,7 @@ footer {
     <div class="centered">
       <div class="section-label">料金プラン</div>
       <h2 class="section-title">シンプルな2プラン</h2>
-      <p class="section-desc">どちらのプランも14日間無料でお試しいただけます。教室の規模に合わせてお選びください。</p>
+      <p class="section-desc">どちらのプランも14日間無料でお試しいただけます。<br>教室の規模に合わせてお選びください。</p>
     </div>
 
     <div class="pricing-grid">
@@ -801,7 +798,7 @@ footer {
         <a href="https://app.gyomu-karugamo.com" class="pricing-cta">14日間無料で試す</a>
       </div>
     </div>
-    <p class="pricing-note">※ 14日間の無料トライアル終了後、自動的に有料プランに移行します。解約後はその時点でただちにサービスの利用ができなくなります。違約金はございません。</p>
+    <p class="pricing-note">※ 14日間の無料トライアル終了後、自動的に有料プランに移行します。<br>解約後はその時点でただちにサービスの利用ができなくなります。違約金はございません。</p>
   </div>
 </section>
 
