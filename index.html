@@ -4,22 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>業務かるがも｜スクショを貼るだけで手順書・マニュアルを自動生成</title>
-<meta name="description" content="スクリーンショットをアップロードするだけで、手順書・マニュアルをWord/Excel形式で自動生成。業務効率化・引き継ぎ資料作成に。無料プランあり。">
-<meta name="keywords" content="手順書作成,マニュアル作成,自動生成,スクリーンショット,Word,Excel,業務効率化,引き継ぎ,操作マニュアル">
-<meta name="author" content="業務かるがも">
+<title>すくすくかるがも｜習い事教室の成長記録＆自動アルバム生成ツール</title>
+<meta name="description" content="レッスンごとに写真とメモを記録するだけ。卒業・進級の節目に自動でアルバムが完成し、保護者へ共有できる習い事教室向けサービス。">
+<meta name="keywords" content="習い事,教室,成長記録,アルバム,卒業,進級,保護者共有,ピアノ教室,スイミング,ダンス教室,英会話,学習塾">
+<meta name="author" content="すくすくかるがも">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://gyomu-karugamo.com/">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="業務かるがも｜スクショを貼るだけで手順書・マニュアルを自動生成">
-<meta property="og:description" content="スクリーンショットをアップロードするだけで、手順書・マニュアルをWord/Excel形式で自動生成。業務効率化・引き継ぎ資料作成に。">
+<meta property="og:title" content="すくすくかるがも｜習い事教室の成長記録＆自動アルバム生成ツール">
+<meta property="og:description" content="レッスンごとに写真とメモを記録するだけ。卒業・進級の節目に自動でアルバムが完成し、保護者へ共有できます。">
 <meta property="og:url" content="https://gyomu-karugamo.com/">
-<meta property="og:site_name" content="業務かるがも">
+<meta property="og:site_name" content="すくすくかるがも">
 <meta property="og:image" content="https://gyomu-karugamo.com/assets/icon.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="業務かるがも｜スクショを貼るだけで手順書・マニュアルを自動生成">
-<meta name="twitter:description" content="スクリーンショットをアップロードするだけで、手順書・マニュアルをWord/Excel形式で自動生成。">
+<meta name="twitter:title" content="すくすくかるがも｜習い事教室の成長記録＆自動アルバム生成ツール">
+<meta name="twitter:description" content="レッスンごとに写真とメモを記録するだけ。卒業・進級の節目に自動でアルバムが完成し、保護者へ共有できます。">
 <meta name="twitter:image" content="https://gyomu-karugamo.com/assets/icon.png">
 
 <link rel="icon" type="image/png" href="https://gyomu-karugamo.com/assets/icon.png">
@@ -33,849 +33,815 @@
   gtag('config', 'G-D74K33M791');
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --cream: #f2ede6;
-  --cream-light: #f8f5f0;
-  --green: #4a7c6f;
-  --green-dark: #3a6359;
-  --green-pale: #e8f0ee;
-  --green-mid: #6a9c8e;
-  --brown: #3d2b1f;
-  --brown-mid: #7a5c4a;
-  --brown-light: #c4a882;
-  --mist: #8a9a96;
-  --border: rgba(196,168,130,0.25);
-  --shadow: 0 4px 24px rgba(61,43,31,0.07);
-  --shadow-lg: 0 8px 40px rgba(61,43,31,0.12);
+  --green: #4a8c6f;
+  --green-dark: #357a5a;
+  --green-light: #6aab8a;
+  --green-pale: #e8f5ee;
+  --green-mist: #f0f8f3;
+  --yellow: #f5c842;
+  --yellow-pale: #fef9e7;
+  --yellow-light: #fff8d6;
+  --beige: #faf7f2;
+  --beige-mid: #f0ebe0;
+  --brown: #5a4232;
+  --brown-mid: #8c7060;
+  --brown-light: #c8b09a;
+  --white: #ffffff;
+  --text: #3a3028;
+  --text-mid: #7a6a5a;
+  --text-light: #a8988a;
 }
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-
 body {
+  background: var(--white);
+  color: var(--text);
   font-family: 'Noto Sans JP', sans-serif;
-  color: var(--brown);
-  background: var(--cream);
-  line-height: 1.8;
-  font-size: 16px;
   font-weight: 300;
+  line-height: 1.9;
 }
-
 a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
 
-/* ===== HEADER ===== */
-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  background: rgba(242,237,230,0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 40px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* ===== NAV ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 14px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(74,140,111,0.12);
+  box-shadow: 0 1px 12px rgba(74,140,111,0.06);
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--brown);
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
   font-family: 'Noto Serif JP', serif;
-  font-weight: 700;
-  font-size: 1.05rem;
+  font-weight: 700; font-size: 1.05rem;
+  color: var(--green-dark);
 }
-
-.logo img { width: 34px; height: 34px; object-fit: contain; }
-
-.header-cta {
+.nav-logo img { width: 32px; height: 32px; }
+.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-link { font-size: 0.84rem; color: var(--text-mid); font-weight: 400; }
+.nav-link:hover { color: var(--green); }
+.nav-cta {
   background: var(--green);
   color: #fff;
-  padding: 10px 24px;
-  border-radius: 8px;
+  padding: 10px 22px;
+  border-radius: 24px;
   font-size: 0.84rem;
   font-weight: 500;
-  transition: background 0.2s, transform 0.1s;
+  transition: background 0.2s;
 }
-
-.header-cta:hover { background: var(--green-dark); transform: translateY(-1px); }
-
-/* ===== SECTIONS ===== */
-section { padding: 88px 40px; }
-
-.container { max-width: 960px; margin: 0 auto; }
-
-.section-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--green-pale);
-  color: var(--green);
-  font-size: 0.76rem;
-  font-weight: 500;
-  padding: 6px 14px;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  letter-spacing: .06em;
-  border: 1px solid rgba(74,124,111,.2);
-}
-
-.section-title {
-  font-family: 'Noto Serif JP', serif;
-  font-size: clamp(1.7rem, 4vw, 2.4rem);
-  font-weight: 900;
-  color: var(--brown);
-  line-height: 1.45;
-  margin-bottom: 16px;
-}
-
-.section-desc {
-  font-size: 0.97rem;
-  color: var(--brown-mid);
-  max-width: 580px;
-  line-height: 2;
-}
+.nav-cta:hover { background: var(--green-dark); }
 
 /* ===== HERO ===== */
-#hero {
-  padding-top: 130px;
-  padding-bottom: 88px;
-  background: var(--cream-light);
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 100px 40px 60px;
+  background: linear-gradient(160deg, var(--green-mist) 0%, var(--yellow-pale) 50%, var(--beige) 100%);
   position: relative;
   overflow: hidden;
 }
-
-#hero::before {
+.hero::before {
   content: '';
   position: absolute;
-  top: -120px; right: -120px;
-  width: 560px; height: 560px;
+  top: -80px; right: -80px;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(74,140,111,0.10) 0%, transparent 70%);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(74,124,111,0.07) 0%, transparent 70%);
-  pointer-events: none;
 }
-
-.hero-inner { max-width: 960px; margin: 0 auto; }
-
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -60px;
+  width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(245,200,66,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative; z-index: 1;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--yellow);
+  color: var(--brown);
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+}
 .hero-title {
   font-family: 'Noto Serif JP', serif;
-  font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 900;
-  color: var(--brown);
-  line-height: 1.4;
-  margin-bottom: 22px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.5;
+  color: var(--green-dark);
+  margin-bottom: 18px;
 }
-
-.hero-title .accent { color: var(--green); }
-
+.hero-title span {
+  color: var(--text);
+}
 .hero-sub {
-  font-size: clamp(0.97rem, 2vw, 1.1rem);
-  color: var(--brown-mid);
-  max-width: 520px;
-  margin-bottom: 38px;
-  line-height: 2;
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+  margin-bottom: 32px;
 }
-
-.hero-cta-wrap { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 64px; }
-
+.hero-cta-group { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
 .btn-primary {
   display: inline-block;
   background: var(--green);
   color: #fff;
-  font-weight: 700;
+  padding: 16px 36px;
+  border-radius: 32px;
   font-size: 1rem;
-  padding: 16px 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(74,124,111,0.3);
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-}
-
-.btn-primary:hover {
-  background: var(--green-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(74,124,111,0.35);
-}
-
-.hero-note { font-size: 0.82rem; color: var(--mist); }
-
-.mock-window {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border);
-  overflow: hidden;
-  max-width: 640px;
-}
-
-.mock-titlebar {
-  background: var(--cream);
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border-bottom: 1px solid var(--border);
-}
-
-.mock-dot { width: 11px; height: 11px; border-radius: 50%; }
-
-.mock-body {
-  padding: 22px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.mock-upload {
-  border: 2px dashed rgba(196,168,130,0.4);
-  border-radius: 10px;
-  padding: 24px 16px;
-  text-align: center;
-  background: var(--cream-light);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.mock-upload .upload-icon { width: 36px; height: 36px; opacity: 0.45; }
-
-.mock-upload .label { font-size: 0.8rem; color: var(--mist); font-weight: 400; }
-
-.mock-upload .upload-btn {
-  background: var(--green);
-  color: #fff;
-  padding: 6px 18px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-.mock-preview {
-  background: var(--green-pale);
-  border-radius: 10px;
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.mock-preview-label { font-size: 0.73rem; font-weight: 700; color: var(--green-dark); margin-bottom: 2px; }
-
-.mock-row {
-  background: #fff;
-  border-radius: 6px;
-  padding: 7px 10px;
-  font-size: 0.76rem;
-  color: var(--brown);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.mock-step {
-  background: var(--green);
-  color: #fff;
-  border-radius: 50%;
-  width: 18px; height: 18px;
-  font-size: 0.68rem;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 18px rgba(74,140,111,0.28);
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+.btn-note { font-size: 0.78rem; color: var(--text-light); }
+
+.hero-visual {
+  display: flex; justify-content: center; align-items: center;
+}
+.hero-card-stack { position: relative; width: 340px; height: 340px; }
+.hero-card {
+  position: absolute;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(74,140,111,0.12), 0 2px 8px rgba(0,0,0,0.06);
+}
+.hero-card-main {
+  width: 280px;
+  top: 20px; left: 0;
+}
+.hero-card-sub {
+  width: 200px;
+  top: 0; right: 0;
+  transform: rotate(4deg);
+  background: var(--yellow-pale);
+  border: 1.5px solid rgba(245,200,66,0.35);
+}
+.hero-card-badge-inner {
+  display: inline-block;
+  background: var(--green-pale);
+  color: var(--green-dark);
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.hero-card-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+.hero-card-date { font-size: 0.72rem; color: var(--text-light); margin-bottom: 12px; }
+.hero-card-photo {
+  width: 100%; height: 100px;
+  background: linear-gradient(135deg, var(--green-pale) 0%, var(--green-mist) 100%);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--green-light);
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+.hero-card-memo { font-size: 0.78rem; color: var(--text-mid); line-height: 1.6; }
+.hero-card-sub .hero-card-name { font-size: 0.85rem; }
+.hero-card-sub .hero-card-badge-inner {
+  background: var(--yellow);
+  color: var(--brown);
 }
 
-.mock-footer {
-  padding: 12px 22px;
-  border-top: 1px solid var(--border);
-  display: flex;
-  gap: 8px;
+/* ===== SECTION BASE ===== */
+section { padding: 88px 40px; }
+.section-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--green);
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
-
-.mock-btn {
-  padding: 7px 14px;
-  border-radius: 6px;
-  font-size: 0.76rem;
-  font-weight: 500;
+.section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.55;
+  margin-bottom: 16px;
 }
-
-.mock-btn-p { background: var(--green); color: #fff; }
-.mock-btn-s { background: var(--green-pale); color: var(--green-dark); }
-
-/* ===== PROBLEM ===== */
-#problem {
-  background: var(--brown);
-  color: #fff;
+.section-desc {
+  font-size: 0.97rem;
+  color: var(--text-mid);
+  line-height: 1.95;
+  max-width: 560px;
 }
+.centered { text-align: center; }
+.centered .section-desc { margin: 0 auto; }
 
-#problem .section-tag { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.15); }
-#problem .section-title { color: #fff; }
-#problem .section-desc { color: rgba(255,255,255,0.55); }
-
-.pain-list {
+/* ===== PAIN ===== */
+.pain-section { background: var(--beige); }
+.pain-inner { max-width: 1000px; margin: 0 auto; }
+.pain-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   margin-top: 48px;
 }
-
 .pain-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px;
-  padding: 24px;
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1.5px solid var(--beige-mid);
 }
-
 .pain-num {
-  background: var(--green);
-  color: #fff;
-  border-radius: 6px;
-  width: 28px; height: 28px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 2px;
   font-family: 'Noto Serif JP', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--beige-mid);
+  line-height: 1;
+  margin-bottom: 12px;
 }
+.pain-text { font-size: 0.94rem; color: var(--text); font-weight: 500; margin-bottom: 6px; }
+.pain-sub { font-size: 0.82rem; color: var(--text-mid); }
 
-.pain-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; color: #fff; }
-.pain-card p { font-size: 0.84rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
-
-/* ===== HOW IT WORKS ===== */
-#how { background: var(--cream); text-align: center; }
-
+/* ===== HOW ===== */
+.how-section { background: var(--green-mist); }
+.how-inner { max-width: 960px; margin: 0 auto; }
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: 32px;
   margin-top: 52px;
   position: relative;
 }
-
 .steps::before {
   content: '';
   position: absolute;
-  top: 32px;
-  left: calc(100% / 6);
-  right: calc(100% / 6);
-  height: 1px;
-  background: var(--border);
-  z-index: 0;
+  top: 52px; left: calc(16.66% + 40px); right: calc(16.66% + 40px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--green-light), var(--yellow));
 }
-
 .step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding: 0 20px;
+  text-align: center;
   position: relative;
-  z-index: 1;
 }
-
 .step-num {
-  width: 64px; height: 64px;
-  background: var(--cream-light);
-  border: 2px solid var(--border);
+  width: 72px; height: 72px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Noto Serif JP', serif;
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--green);
-  box-shadow: var(--shadow);
-}
-
-.step h3 { font-size: 0.97rem; font-weight: 700; color: var(--brown); font-family: 'Noto Serif JP', serif; }
-.step p { font-size: 0.84rem; color: var(--brown-mid); }
-
-/* ===== FEATURES ===== */
-#features { background: var(--cream-light); }
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 18px;
-  margin-top: 48px;
-}
-
-.feature-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 28px 24px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.feature-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-
-.feature-num {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--green-pale);
-  margin-bottom: 14px;
-  display: block;
-  line-height: 1;
-}
-
-/* second color for alternating */
-.feature-card:nth-child(odd) .feature-num { color: rgba(74,124,111,0.18); }
-
-.feature-card h3 { font-size: 0.97rem; font-weight: 700; color: var(--brown); margin-bottom: 8px; font-family: 'Noto Serif JP', serif; }
-.feature-card p { font-size: 0.84rem; color: var(--brown-mid); line-height: 1.8; }
-
-/* ===== PRICING ===== */
-#pricing { background: var(--cream); text-align: center; }
-
-.plans {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 48px;
-}
-
-.plan {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 32px 24px;
-  position: relative;
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-align: left;
-}
-
-.plan:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-
-.plan.recommended {
-  border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(74,124,111,0.12);
-}
-
-.plan-badge {
-  position: absolute;
-  top: -13px;
-  left: 50%;
-  transform: translateX(-50%);
   background: var(--green);
   color: #fff;
-  font-size: 0.73rem;
-  font-weight: 700;
-  padding: 4px 16px;
-  border-radius: 100px;
-  white-space: nowrap;
-  letter-spacing: .04em;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 16px rgba(74,140,111,0.22);
+  position: relative; z-index: 1;
 }
+.step-title { font-weight: 700; font-size: 1rem; margin-bottom: 10px; color: var(--green-dark); }
+.step-desc { font-size: 0.85rem; color: var(--text-mid); line-height: 1.8; }
+.step-icon {
+  width: 100%; height: 90px;
+  background: #fff;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+  border: 1.5px solid rgba(74,140,111,0.12);
+  font-size: 2.2rem;
+}
+.how-result {
+  margin-top: 48px;
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-light) 100%);
+  border-radius: 20px;
+  padding: 36px 32px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.how-result-icon { font-size: 3.5rem; flex-shrink: 0; }
+.how-result-text { }
+.how-result-title { font-family: 'Noto Serif JP', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+.how-result-desc { font-size: 0.9rem; opacity: 0.9; line-height: 1.8; }
 
-.plan-name { font-size: 0.88rem; font-weight: 700; color: var(--mist); margin-bottom: 10px; letter-spacing: .08em; }
-.plan-price { font-family: 'Noto Serif JP', serif; font-size: 2.2rem; font-weight: 900; color: var(--brown); line-height: 1.1; }
-.plan-price span { font-size: 0.88rem; font-weight: 400; color: var(--mist); font-family: 'Noto Sans JP', sans-serif; }
+/* ===== FEATURES ===== */
+.features-section { background: #fff; }
+.features-inner { max-width: 1000px; margin: 0 auto; }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 52px;
+}
+.feature-card {
+  background: var(--beige);
+  border-radius: 20px;
+  padding: 32px 28px;
+  border: 1.5px solid var(--beige-mid);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(74,140,111,0.10); }
+.feature-icon {
+  width: 56px; height: 56px;
+  background: var(--green-pale);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+.feature-num { font-size: 0.72rem; color: var(--green); font-weight: 700; margin-bottom: 6px; letter-spacing: 0.08em; }
+.feature-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; color: var(--green-dark); }
+.feature-desc { font-size: 0.87rem; color: var(--text-mid); line-height: 1.85; }
 
-.plan-divider { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
-
-.plan-features {
-  list-style: none;
+/* ===== SCHOOLS ===== */
+.schools-section { background: var(--yellow-pale); }
+.schools-inner { max-width: 900px; margin: 0 auto; }
+.schools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 44px;
+}
+.school-chip {
+  background: #fff;
+  border: 1.5px solid rgba(245,200,66,0.4);
+  border-radius: 16px;
+  padding: 18px 24px;
   display: flex;
   flex-direction: column;
-  gap: 9px;
-}
-
-.plan-features li {
-  font-size: 0.86rem;
-  color: var(--brown);
-  display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
-  line-height: 1.6;
-}
-
-.plan-features li::before { content: '—'; color: var(--green); font-weight: 700; flex-shrink: 0; }
-.plan-features li.off { color: var(--mist); }
-.plan-features li.off::before { content: '—'; color: rgba(138,154,150,0.4); }
-
-.plan-cta {
-  display: block;
-  margin-top: 22px;
-  padding: 11px;
-  border-radius: 8px;
-  font-size: 0.88rem;
-  font-weight: 700;
-  text-decoration: none;
+  min-width: 140px;
   text-align: center;
-  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 10px rgba(245,200,66,0.1);
 }
+.school-chip-icon { font-size: 2rem; }
+.school-chip-name { font-size: 0.82rem; font-weight: 700; color: var(--brown); }
+.school-chip-note { font-size: 0.72rem; color: var(--text-light); }
 
-.plan-cta-p { background: var(--green); color: #fff; }
-.plan-cta-p:hover { background: var(--green-dark); }
-.plan-cta-o { background: transparent; color: var(--green); border: 1.5px solid rgba(74,124,111,0.4); }
-.plan-cta-o:hover { background: var(--green-pale); }
-
-/* ===== CTA SECTION ===== */
-#cta {
-  background: var(--green-dark);
-  text-align: center;
-  padding: 96px 40px;
+/* ===== PRICING ===== */
+.pricing-section { background: var(--beige); }
+.pricing-inner { max-width: 760px; margin: 0 auto; }
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 52px;
+}
+.pricing-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 36px 30px;
+  border: 2px solid var(--beige-mid);
   position: relative;
-  overflow: hidden;
 }
-
-#cta::before {
-  content: '';
+.pricing-card.featured {
+  border-color: var(--green);
+  box-shadow: 0 8px 32px rgba(74,140,111,0.14);
+}
+.pricing-badge {
   position: absolute;
-  width: 400px; height: 400px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.04);
-  bottom: -100px; right: -80px;
-  pointer-events: none;
+  top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--green);
+  color: #fff;
+  padding: 5px 18px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
+.pricing-plan-name {
+  font-size: 0.78rem;
+  color: var(--text-mid);
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 0.06em;
+}
+.pricing-price {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 900;
+  font-size: 2.4rem;
+  color: var(--green-dark);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.pricing-price span { font-size: 1rem; font-family: 'Noto Sans JP', sans-serif; font-weight: 400; }
+.pricing-period { font-size: 0.78rem; color: var(--text-light); margin-bottom: 24px; }
+.pricing-features { list-style: none; margin-bottom: 28px; }
+.pricing-features li {
+  padding: 9px 0;
+  border-bottom: 1px solid var(--beige-mid);
+  font-size: 0.87rem;
+  display: flex; align-items: flex-start; gap: 8px;
+}
+.pricing-features li:last-child { border-bottom: none; }
+.pricing-check { color: var(--green); font-weight: 700; flex-shrink: 0; }
+.pricing-cta {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: var(--green-pale);
+  color: var(--green-dark);
+  transition: background 0.2s;
+}
+.pricing-card.featured .pricing-cta {
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(74,140,111,0.25);
+}
+.pricing-cta:hover { opacity: 0.85; }
+.pricing-note { text-align: center; margin-top: 20px; font-size: 0.78rem; color: var(--text-light); }
 
-#cta .section-title { color: #fff; }
-#cta .section-desc { color: rgba(255,255,255,0.7); margin: 0 auto 40px; }
-
+/* ===== CTA ===== */
+.cta-section {
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-light) 100%);
+  padding: 88px 40px;
+  text-align: center;
+}
+.cta-title {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 900;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  color: #fff;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+.cta-sub { color: rgba(255,255,255,0.85); font-size: 0.97rem; margin-bottom: 32px; }
 .btn-white {
   display: inline-block;
   background: #fff;
   color: var(--green-dark);
-  font-weight: 700;
+  padding: 18px 44px;
+  border-radius: 32px;
   font-size: 1rem;
-  padding: 16px 48px;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  transition: transform 0.15s, box-shadow 0.2s;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  transition: transform 0.15s;
 }
-
-.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
-
-.cta-note { color: rgba(255,255,255,0.45); font-size: 0.8rem; margin-top: 16px; }
+.btn-white:hover { transform: translateY(-2px); }
 
 /* ===== FOOTER ===== */
 footer {
   background: var(--brown);
-  padding: 40px;
+  padding: 44px 40px;
   text-align: center;
-  font-size: 0.8rem;
 }
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: var(--cream-light);
+.f-logo {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
   font-family: 'Noto Serif JP', serif;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 700; font-size: 1rem;
+  color: var(--beige);
   margin-bottom: 18px;
 }
-
-.footer-logo img { width: 28px; height: 28px; object-fit: contain; }
-
-.footer-links {
-  display: flex;
-  gap: 22px;
-  justify-content: center;
-  flex-wrap: wrap;
+.f-logo img { width: 28px; height: 28px; }
+.f-links {
+  display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
   margin-bottom: 18px;
 }
-
-.footer-links a { color: var(--brown-light); transition: color 0.2s; }
-.footer-links a:hover { color: var(--cream-light); }
-
-.footer-copy { color: rgba(196,168,130,0.4); font-size: 0.72rem; }
+.f-links a { color: var(--brown-light); font-size: 0.77rem; }
+.f-links a:hover { color: var(--beige); }
+.f-copy { font-size: 0.7rem; color: rgba(200,176,154,0.45); }
 
 /* ===== FADE IN ===== */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
 }
-
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  section { padding: 72px 24px; }
-  header { padding: 0 24px; }
-  footer { padding: 32px 24px; }
-}
-
-@media (max-width: 700px) {
-  section { padding: 60px 20px; }
-  .mock-body { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr; gap: 32px; }
+  nav, section, .cta-section, footer { padding-left: 20px; padding-right: 20px; }
+  .hero { padding-left: 20px; padding-right: 20px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { display: none; }
+  .steps { grid-template-columns: 1fr; }
   .steps::before { display: none; }
-  .plans { grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto; }
-  .features-grid { grid-template-columns: 1fr; }
-  .hero-cta-wrap { flex-direction: column; align-items: flex-start; }
+  .pain-grid, .features-grid, .pricing-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .nav-link { display: none; }
+  .hero-title { font-size: 1.8rem; }
+  .schools-grid { gap: 10px; }
+  .school-chip { min-width: 120px; padding: 14px 16px; }
 }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <a href="#" class="logo">
-    <img src="https://gyomu-karugamo.com/assets/icon.png" alt="業務かるがも">
-    業務かるがも
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="https://gyomu-karugamo.com/assets/icon.png" alt="すくすくかるがも">
+    すくすくかるがも
   </a>
-  <a href="https://app.gyomu-karugamo.com/app.html" class="header-cta">無料で試す</a>
-</header>
+  <div class="nav-right">
+    <a href="#pricing" class="nav-link">料金プラン</a>
+    <a href="https://app.gyomu-karugamo.com/app.html" class="nav-cta">事前登録する</a>
+  </div>
+</nav>
 
 <!-- HERO -->
-<section id="hero">
+<section class="hero">
   <div class="hero-inner">
-    <div class="section-tag">日本語UI・シンプル設計</div>
-    <h1 class="hero-title">
-      スクショを貼るだけで、<br>
-      <span class="accent">手順書が完成する。</span>
-    </h1>
-    <p class="hero-sub">
-      スクリーンショットをアップロードするだけで、<br>
-      Word・Excel形式の手順書・マニュアルを自動生成。<br>
-      面倒な文章作成はもう不要です。
-    </p>
-    <div class="hero-cta-wrap">
-      <a href="https://app.gyomu-karugamo.com/app.html" class="btn-primary">無料で試してみる</a>
-      <span class="hero-note">クレジットカード不要・月3件まで永久無料</span>
+    <div class="hero-text">
+      <div class="hero-badge">習い事教室向け 成長記録ツール</div>
+      <h1 class="hero-title">気づけば、<span>もう一冊の</span><br>アルバムができていた。</h1>
+      <p class="hero-sub">
+        レッスンごとに写真とひとことメモを残すだけ。<br>
+        卒業・進級のとき、素敵なアルバムが自動で完成します。<br>
+        保護者への感動的な贈り物を、日々の積み重ねから。
+      </p>
+      <div class="hero-cta-group">
+        <a href="https://app.gyomu-karugamo.com/app.html" class="btn-primary">無料で事前登録する</a>
+        <span class="btn-note">クレジットカード不要・いつでもキャンセル可</span>
+      </div>
     </div>
-
-    <div class="mock-window">
-      <div class="mock-titlebar">
-        <div class="mock-dot" style="background:#ff5f57"></div>
-        <div class="mock-dot" style="background:#febc2e"></div>
-        <div class="mock-dot" style="background:#28c840"></div>
-        <span style="margin-left:10px; font-size:0.76rem; color:var(--mist);">業務かるがも — 手順書生成</span>
-      </div>
-      <div class="mock-body">
-        <div class="mock-upload">
-          <img class="upload-icon" src="https://gyomu-karugamo.com/assets/icon.png" alt="">
-          <div class="label">スクリーンショットをここにドロップ</div>
-          <div class="upload-btn">ファイルを選択</div>
+    <div class="hero-visual">
+      <div class="hero-card-stack">
+        <div class="hero-card hero-card-main">
+          <div class="hero-card-badge-inner">山田 さくらちゃん</div>
+          <div class="hero-card-name">ピアノ発表会の練習</div>
+          <div class="hero-card-date">2024年11月12日</div>
+          <div class="hero-card-photo">
+            <img src="https://gyomu-karugamo.com/assets/icon.png" alt="" style="width:44px;height:44px;opacity:0.45;">
+          </div>
+          <div class="hero-card-memo">初めてミスなく最後まで弾けました！本人もとても嬉しそうでした。</div>
         </div>
-        <div class="mock-preview">
-          <div class="mock-preview-label">自動生成された手順書</div>
-          <div class="mock-row"><div class="mock-step">1</div>管理画面にログインする</div>
-          <div class="mock-row"><div class="mock-step">2</div>「設定」メニューを開く</div>
-          <div class="mock-row"><div class="mock-step">3</div>ユーザー情報を入力する</div>
-          <div class="mock-row"><div class="mock-step">4</div>「保存」ボタンをクリック</div>
+        <div class="hero-card hero-card-sub">
+          <div class="hero-card-badge-inner">自動生成完了</div>
+          <div class="hero-card-name">卒業アルバム</div>
+          <div class="hero-card-date">3年間の記録 · 全52枚</div>
         </div>
-      </div>
-      <div class="mock-footer">
-        <div class="mock-btn mock-btn-p">Word形式で出力</div>
-        <div class="mock-btn mock-btn-s">Excel形式で出力</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section id="problem">
-  <div class="container">
-    <div class="section-tag">こんな悩み、ありませんか？</div>
-    <h2 class="section-title">手順書づくりは、<br>こんなに面倒くさい。</h2>
-    <p class="section-desc">手順書作りに時間をかけてきた方なら、きっと共感できるはず。</p>
+<!-- PAIN -->
+<section class="pain-section">
+  <div class="pain-inner fade-in">
+    <div class="section-label">よくある課題</div>
+    <h2 class="section-title">「卒業シーズンに<br>慌てる」をなくしたい</h2>
+    <p class="section-desc">多くの教室で起きているお悩みです。</p>
 
-    <div class="pain-list fade-in">
+    <div class="pain-grid">
       <div class="pain-card">
-        <div class="pain-num">1</div>
-        <div>
-          <h3>作業時間が膨大</h3>
-          <p>スクショを撮って、ペーストして、説明文を書いて…。1本の手順書に何時間もかかってしまう。</p>
-        </div>
+        <div class="pain-num">01</div>
+        <div class="pain-text">卒業・発表会の直前に「写真が足りない」と気づく</div>
+        <div class="pain-sub">日々の記録を後回しにしていると、節目のたびに焦ることになります。</div>
       </div>
       <div class="pain-card">
-        <div class="pain-num">2</div>
-        <div>
-          <h3>文章を書くのが苦手</h3>
-          <p>操作はわかるけど、言語化が難しい。「どう説明すればいい？」と悩んで手が止まってしまう。</p>
-        </div>
+        <div class="pain-num">02</div>
+        <div class="pain-text">アルバムを作りたいが、まとめる時間も余裕もない</div>
+        <div class="pain-sub">写真の選別・並べ替え・印刷注文など、作業が多すぎて後回しになりがちです。</div>
       </div>
       <div class="pain-card">
-        <div class="pain-num">3</div>
-        <div>
-          <h3>更新のたびに作り直し</h3>
-          <p>システムのUIが変わるたびに手順書も修正。でも忙しくて後回しにしたら古い情報のまま…。</p>
-        </div>
+        <div class="pain-num">03</div>
+        <div class="pain-text">保護者への特別な贈り物を用意できていない</div>
+        <div class="pain-sub">「何か渡したい」と思いながら、毎年何もできずに終わってしまう…。</div>
       </div>
       <div class="pain-card">
-        <div class="pain-num">4</div>
-        <div>
-          <h3>英語UIツールばかり</h3>
-          <p>海外製ツールは便利だけど、UIが英語で使いにくい。クライアントへの提出書類は日本語で必要。</p>
-        </div>
+        <div class="pain-num">04</div>
+        <div class="pain-text">生徒の成長を振り返る仕組みがなく、記録が散在している</div>
+        <div class="pain-sub">スマホの写真、メモ帳、SNSのDM…記録がバラバラで活用しにくいです。</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="how">
-  <div class="container" style="text-align:center;">
-    <div class="section-tag">使い方</div>
-    <h2 class="section-title">たった3ステップで完成</h2>
-    <p class="section-desc" style="margin:0 auto;">むずかしい操作は一切なし。スクショを用意するだけでOK。</p>
+<section class="how-section">
+  <div class="how-inner fade-in">
+    <div class="centered">
+      <div class="section-label">使い方</div>
+      <h2 class="section-title">記録するだけで、<br>アルバムが育っていく</h2>
+    </div>
 
-    <div class="steps fade-in">
+    <div class="steps">
       <div class="step">
-        <div class="step-num">01</div>
-        <h3>スクショをアップロード</h3>
-        <p>説明したい操作画面のスクリーンショットをドラッグ&ドロップするだけ</p>
+        <div class="step-num">1</div>
+        <div class="step-icon">📷</div>
+        <div class="step-title">レッスンごとに記録</div>
+        <div class="step-desc">写真とひとことメモをアップロード。30秒もかかりません。</div>
       </div>
       <div class="step">
-        <div class="step-num">02</div>
-        <h3>AIが自動で解析・文章化</h3>
-        <p>画面の内容をAIが読み取り、わかりやすい手順説明を自動で生成</p>
+        <div class="step-num">2</div>
+        <div class="step-icon">📅</div>
+        <div class="step-title">記録が自動で蓄積</div>
+        <div class="step-desc">生徒ごとのタイムラインに記録が積み重なります。あとは任せるだけ。</div>
       </div>
       <div class="step">
-        <div class="step-num">03</div>
-        <h3>Word/Excelで出力</h3>
-        <p>そのままクライアントに渡せる、整ったフォーマットのファイルを即ダウンロード</p>
+        <div class="step-num">3</div>
+        <div class="step-icon">📖</div>
+        <div class="step-title">節目に自動でアルバム生成</div>
+        <div class="step-desc">卒業・進級のタイミングで、アルバムが自動でできあがります。</div>
+      </div>
+    </div>
+
+    <div class="how-result">
+      <div class="how-result-icon">🎁</div>
+      <div class="how-result-text">
+        <div class="how-result-title">保護者に共有リンクを送るだけ</div>
+        <div class="how-result-desc">
+          完成したアルバムをPDF・画像・共有リンクで保護者に届けられます。<br>
+          印刷不要。「ちゃんと見てくれていたんだ」という感動を、手軽に届けましょう。
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FEATURES -->
-<section id="features">
-  <div class="container">
-    <div class="section-tag">機能</div>
-    <h2 class="section-title">業務かるがもが選ばれる理由</h2>
-    <p class="section-desc">現場で本当に必要な機能だけを、シンプルに。</p>
+<section class="features-section">
+  <div class="features-inner fade-in">
+    <div class="centered">
+      <div class="section-label">機能紹介</div>
+      <h2 class="section-title">必要なことだけ、<br>シンプルに揃っています</h2>
+    </div>
 
-    <div class="features-grid fade-in">
+    <div class="features-grid">
       <div class="feature-card">
-        <span class="feature-num">01</span>
-        <h3>完全日本語UI</h3>
-        <p>メニューから出力ファイルまで、すべて日本語。外国語が苦手な方でも迷わず使えます。</p>
+        <div class="feature-icon">📷</div>
+        <div class="feature-num">FEATURE 01</div>
+        <div class="feature-title">かんたんレッスン記録</div>
+        <div class="feature-desc">写真をアップロードしてひとことメモを添えるだけ。余計な操作はありません。スマートフォンからでもサッと記録できます。</div>
       </div>
       <div class="feature-card">
-        <span class="feature-num">02</span>
-        <h3>Word・Excel・PDF対応</h3>
-        <p>Word形式はマニュアル、Excel形式はチェックリストや工程表など、用途に合わせて選択できます。</p>
+        <div class="feature-icon">📈</div>
+        <div class="feature-num">FEATURE 02</div>
+        <div class="feature-title">生徒ごとの成長タイムライン</div>
+        <div class="feature-desc">生徒一人ひとりの記録が時系列で並び、いつでも振り返れます。初めての発表会、上達の軌跡がひと目でわかります。</div>
       </div>
       <div class="feature-card">
-        <span class="feature-num">03</span>
-        <h3>画像付きで見やすい</h3>
-        <p>アップロードしたスクリーンショットを自動で挿入。画像と説明文がセットになった手順書を生成します。</p>
+        <div class="feature-icon">✨</div>
+        <div class="feature-num">FEATURE 03</div>
+        <div class="feature-title">節目の自動アルバム生成</div>
+        <div class="feature-desc">卒業・進級のタイミングで、蓄積した記録から自動でアルバムを生成。写真の並べ替えや削除程度の軽い編集で完成します。</div>
       </div>
       <div class="feature-card">
-        <span class="feature-num">04</span>
-        <h3>履歴・テンプレート保存</h3>
-        <p>一度作った手順書は保存しておける（Standard・Premiumプラン）。次回から同じ形式で素早く作成。</p>
+        <div class="feature-icon">🔗</div>
+        <div class="feature-num">FEATURE 04</div>
+        <div class="feature-title">保護者への共有リンク発行</div>
+        <div class="feature-desc">完成したアルバムをPDF・画像・共有リンクで保護者に届けられます。印刷不要。感動をデータで手軽に渡せます。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOLS -->
+<section class="schools-section">
+  <div class="schools-inner fade-in">
+    <div class="centered">
+      <div class="section-label">こんな教室に</div>
+      <h2 class="section-title">さまざまな習い事教室で<br>お使いいただけます</h2>
+    </div>
+
+    <div class="schools-grid">
+      <div class="school-chip">
+        <div class="school-chip-icon">🎹</div>
+        <div class="school-chip-name">ピアノ教室</div>
+        <div class="school-chip-note">発表会・進級記録に</div>
+      </div>
+      <div class="school-chip">
+        <div class="school-chip-icon">🏊</div>
+        <div class="school-chip-name">スイミング</div>
+        <div class="school-chip-note">級ごとの成長を記録</div>
+      </div>
+      <div class="school-chip">
+        <div class="school-chip-icon">💃</div>
+        <div class="school-chip-name">ダンス教室</div>
+        <div class="school-chip-note">ステージ記録・卒業に</div>
+      </div>
+      <div class="school-chip">
+        <div class="school-chip-icon">🗣️</div>
+        <div class="school-chip-name">英会話教室</div>
+        <div class="school-chip-note">スピーチ・発表記録に</div>
+      </div>
+      <div class="school-chip">
+        <div class="school-chip-icon">✏️</div>
+        <div class="school-chip-name">学習塾</div>
+        <div class="school-chip-note">受験・進級お祝いに</div>
+      </div>
+      <div class="school-chip">
+        <div class="school-chip-icon">🥋</div>
+        <div class="school-chip-name">武道・体操</div>
+        <div class="school-chip-note">昇段・大会記録に</div>
+      </div>
+      <div class="school-chip">
+        <div class="school-chip-icon">🎨</div>
+        <div class="school-chip-name">絵画・工作</div>
+        <div class="school-chip-note">作品ポートフォリオに</div>
+      </div>
+      <div class="school-chip">
+        <div class="school-chip-icon">🎻</div>
+        <div class="school-chip-name">その他の教室</div>
+        <div class="school-chip-note">あらゆる習い事に対応</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing">
-  <div class="container">
-    <div class="section-tag" style="display:block; text-align:center;">料金プラン</div>
-    <h2 class="section-title" style="text-align:center;">まずは無料からはじめよう</h2>
-    <p class="section-desc" style="margin:0 auto; text-align:center;">クレジットカード不要。使いながら必要なプランを選べます。</p>
+<section class="pricing-section" id="pricing">
+  <div class="pricing-inner fade-in">
+    <div class="centered">
+      <div class="section-label">料金プラン</div>
+      <h2 class="section-title">シンプルな2プラン</h2>
+      <p class="section-desc">教室の規模に合わせてお選びください。</p>
+    </div>
 
-    <div class="plans fade-in">
-      <div class="plan">
-        <div class="plan-name">FREE</div>
-        <div class="plan-price">¥0<span>/月</span></div>
-        <hr class="plan-divider">
-        <ul class="plan-features">
-          <li>手順書生成：月3件まで</li>
-          <li>出力形式：Wordのみ</li>
-          <li>画像：1件につき10枚まで</li>
-          <li class="off">手順書の保存・履歴</li>
-          <li class="off">テンプレート</li>
-          <li>透かし（ロゴ）あり</li>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-plan-name">LIGHT PLAN</div>
+        <div class="pricing-price">¥1,980<span>/月</span></div>
+        <div class="pricing-period">税込・月払い</div>
+        <ul class="pricing-features">
+          <li><span class="pricing-check">✓</span>生徒登録 〜30名</li>
+          <li><span class="pricing-check">✓</span>レッスン記録（写真・メモ）</li>
+          <li><span class="pricing-check">✓</span>生徒ごとのタイムライン</li>
+          <li><span class="pricing-check">✓</span>自動アルバム生成</li>
+          <li><span class="pricing-check">✓</span>共有リンク発行</li>
+          <li><span class="pricing-check">✓</span>PDF・画像エクスポート</li>
         </ul>
-        <a href="https://app.gyomu-karugamo.com/app.html" class="plan-cta plan-cta-o">無料ではじめる</a>
+        <a href="https://app.gyomu-karugamo.com/app.html" class="pricing-cta">事前登録する</a>
       </div>
 
-      <div class="plan recommended">
-        <div class="plan-badge">おすすめ</div>
-        <div class="plan-name">STANDARD</div>
-        <div class="plan-price">¥980<span>/月</span></div>
-        <hr class="plan-divider">
-        <ul class="plan-features">
-          <li>手順書生成：月20件まで</li>
-          <li>出力形式：Word＋Excel</li>
-          <li>画像：1件につき30枚まで</li>
-          <li>手順書保存：30日間</li>
-          <li>テンプレート：3種類</li>
-          <li>透かしなし</li>
+      <div class="pricing-card featured">
+        <div class="pricing-badge">おすすめ</div>
+        <div class="pricing-plan-name">STANDARD PLAN</div>
+        <div class="pricing-price">¥2,980<span>/月</span></div>
+        <div class="pricing-period">税込・月払い</div>
+        <ul class="pricing-features">
+          <li><span class="pricing-check">✓</span>生徒登録 無制限</li>
+          <li><span class="pricing-check">✓</span>レッスン記録（写真・メモ）</li>
+          <li><span class="pricing-check">✓</span>生徒ごとのタイムライン</li>
+          <li><span class="pricing-check">✓</span>自動アルバム生成</li>
+          <li><span class="pricing-check">✓</span>共有リンク発行</li>
+          <li><span class="pricing-check">✓</span>PDF・画像エクスポート</li>
+          <li><span class="pricing-check">✓</span>複数講師アカウント</li>
+          <li><span class="pricing-check">✓</span>優先サポート</li>
         </ul>
-        <a href="https://app.gyomu-karugamo.com/app.html" class="plan-cta plan-cta-p">Standard を試す</a>
-      </div>
-
-      <div class="plan">
-        <div class="plan-name">PREMIUM</div>
-        <div class="plan-price">¥1,980<span>/月</span></div>
-        <hr class="plan-divider">
-        <ul class="plan-features">
-          <li>手順書生成：無制限</li>
-          <li>出力形式：Word＋Excel＋PDF</li>
-          <li>画像：無制限</li>
-          <li>手順書保存：無制限</li>
-          <li>テンプレート：10種類以上</li>
-          <li>透かしなし</li>
-        </ul>
-        <a href="https://app.gyomu-karugamo.com/app.html" class="plan-cta plan-cta-o">Premium を試す</a>
+        <a href="https://app.gyomu-karugamo.com/app.html" class="pricing-cta">事前登録する</a>
       </div>
     </div>
+    <p class="pricing-note">※ 解約後はその時点でただちにサービスの利用ができなくなります。違約金はございません。</p>
   </div>
 </section>
 
 <!-- CTA -->
-<section id="cta">
-  <div class="container" style="position:relative;z-index:1;">
-    <h2 class="section-title">今すぐ手順書作りを<br>ラクにしよう</h2>
-    <p class="section-desc">登録はメールアドレスだけ。<br>30秒でスタートできます。</p>
-    <a href="https://app.gyomu-karugamo.com/app.html" class="btn-white">無料ではじめる</a>
-    <p class="cta-note">クレジットカード不要・月3件まで永久無料</p>
-  </div>
+<section class="cta-section fade-in">
+  <h2 class="cta-title">「気づいたら、素敵なアルバムができていた」<br>そんな教室を一緒に作りましょう。</h2>
+  <p class="cta-sub">日々の小さな積み重ねが、保護者への感動的な贈り物になります。</p>
+  <a href="https://app.gyomu-karugamo.com/app.html" class="btn-white">無料で事前登録する</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    <img src="https://gyomu-karugamo.com/assets/icon.png" alt="業務かるがも">
-    業務かるがも
+  <div class="f-logo">
+    <img src="https://gyomu-karugamo.com/assets/icon.png" alt="すくすくかるがも">
+    すくすくかるがも
   </div>
-  <div class="footer-links">
-    <a href="/terms.html">利用規約</a>
-    <a href="/privacy.html">プライバシーポリシー</a>
-    <a href="/legal.html">特定商取引法に基づく表示</a>
-    <a href="/contact.html">お問い合わせ</a>
+  <div class="f-links">
+    <a href="https://gyomu-karugamo.com/terms.html">利用規約</a>
+    <a href="https://gyomu-karugamo.com/privacy.html">プライバシーポリシー</a>
+    <a href="https://gyomu-karugamo.com/legal.html">特定商取引法に基づく表記</a>
+    <a href="https://gyomu-karugamo.com/contact.html">お問い合わせ</a>
   </div>
-  <div class="footer-copy">© 2025 業務かるがも. All rights reserved.</div>
+  <div class="f-copy">© 2025 すくすくかるがも. All rights reserved.</div>
 </footer>
 
 <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
 </body>
