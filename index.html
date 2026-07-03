@@ -210,14 +210,14 @@ nav {
 }
 .hero-album-stack {
   position: relative;
-  width: 320px;
-  height: 380px;
+  width: 340px;
+  height: 400px;
 }
 .hero-album-page {
   position: absolute;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(74,140,111,0.14), 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 32px rgba(74,140,111,0.15), 0 2px 8px rgba(0,0,0,0.10);
 }
 .hero-album-page img {
   width: 100%;
@@ -225,23 +225,26 @@ nav {
   object-fit: cover;
   display: block;
 }
+/* photo01: アルバム表紙（正方形）→ 前面中央 */
 .hero-album-page:nth-child(1) {
-  width: 230px; height: 290px;
-  top: 50px; left: 10px;
+  width: 220px; height: 220px;
+  top: 80px; left: 20px;
   z-index: 3;
 }
+/* photo02: レッスン記録ページ → 右上に傾けて */
 .hero-album-page:nth-child(2) {
-  width: 200px; height: 260px;
-  top: 20px; right: 10px;
+  width: 195px; height: 240px;
+  top: 10px; right: 10px;
   z-index: 2;
-  transform: rotate(5deg);
+  transform: rotate(4deg);
 }
+/* photo03: レッスン記録ページ → 右下に控えめに */
 .hero-album-page:nth-child(3) {
-  width: 180px; height: 230px;
-  top: 100px; right: 0;
+  width: 175px; height: 215px;
+  top: 165px; right: 5px;
   z-index: 1;
-  transform: rotate(-3deg);
-  opacity: 0.7;
+  transform: rotate(-4deg);
+  opacity: 0.75;
 }
 
 /* ===== SECTION BASE ===== */
@@ -627,19 +630,19 @@ footer {
       <div class="hero-features">
         <div class="hero-feature-item">
           <span class="hf-check">✓</span>
-          <span class="hf-label"><strong>成長記録 × 自動アルバム生成</strong>　記録が貯まると、自動でアルバムに仕上がります</span>
+          <span class="hf-label"><strong>成長記録 × 自動アルバム生成</strong></span>
         </div>
         <div class="hero-feature-item">
           <span class="hf-check">✓</span>
-          <span class="hf-label"><strong>生徒一人ひとりに専用アルバム</strong>　名前・写真・メモが生徒別に整理されます</span>
+          <span class="hf-label"><strong>生徒一人ひとりに専用アルバム</strong></span>
         </div>
         <div class="hero-feature-item">
           <span class="hf-check">✓</span>
-          <span class="hf-label"><strong>データで保護者にお渡し</strong>　PDF・画像・共有リンクで簡単に届けられます</span>
+          <span class="hf-label"><strong>データで保護者にお渡し</strong></span>
         </div>
         <div class="hero-feature-item">
           <span class="hf-check">✓</span>
-          <span class="hf-label"><strong>月額定額・クオリティで値段は変わらない</strong>　アルバムの枚数や内容で金額は変わりません。プランは教室規模に合わせて2種類</span>
+          <span class="hf-label"><strong>月額定額・クオリティで値段は変わらない</strong></span>
         </div>
       </div>
       <div class="hero-cta-group">
@@ -650,13 +653,13 @@ footer {
     <div class="hero-visual">
       <div class="hero-album-stack">
         <div class="hero-album-page">
-          <img src="/assets/album/page_03.jpg" alt="アルバムサンプル">
+          <img src="/assets/photo01.png" alt="アルバムサンプル 表紙">
         </div>
         <div class="hero-album-page">
-          <img src="/assets/album/page_05.jpg" alt="アルバムサンプル">
+          <img src="/assets/photo02.png" alt="アルバムサンプル">
         </div>
         <div class="hero-album-page">
-          <img src="/assets/album/page_01.jpg" alt="アルバムサンプル 表紙">
+          <img src="/assets/photo03.png" alt="アルバムサンプル">
         </div>
       </div>
     </div>
