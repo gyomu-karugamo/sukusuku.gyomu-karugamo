@@ -4,7 +4,7 @@
   <!-- メインページ -->
   <url>
     <loc>https://gyomu-karugamo.com/</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- コラム一覧 -->
   <url>
     <loc>https://gyomu-karugamo.com/column/index.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,55 +20,55 @@
   <!-- コラム記事 -->
   <url>
     <loc>https://gyomu-karugamo.com/column/article-01.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gyomu-karugamo.com/column/article-02.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gyomu-karugamo.com/column/article-03.html</loc>
-    <lastmod>2026-04-04</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gyomu-karugamo.com/column/article-04.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gyomu-karugamo.com/column/article-05.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gyomu-karugamo.com/column/article-06.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gyomu-karugamo.com/column/article-07.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gyomu-karugamo.com/column/article-08.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://gyomu-karugamo.com/column/article-09.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -76,25 +76,25 @@
   <!-- その他ページ -->
   <url>
     <loc>https://gyomu-karugamo.com/contact.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://gyomu-karugamo.com/terms.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://gyomu-karugamo.com/privacy.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://gyomu-karugamo.com/legal.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
