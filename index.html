@@ -467,7 +467,7 @@ section { padding: 88px 40px; }
 
 /* ===== ALBUM PREVIEW ===== */
 .album-section { background: var(--green-mist); }
-.album-inner { max-width: 640px; margin: 0 auto; }
+.album-inner { max-width: 640px; margin: 0 auto; width: 100%; }
 .album-viewer { margin-top: 48px; position: relative; }
 .album-slides {
   overflow: hidden;
@@ -589,12 +589,19 @@ footer {
   .steps { grid-template-columns: 1fr; }
   .steps::before { display: none; }
   .features-grid, .pricing-grid { grid-template-columns: 1fr; }
+  .album-inner { max-width: 100%; }
+  .album-viewer { margin-top: 32px; }
+  .album-btn { width: 36px; height: 36px; font-size: 1.1rem; }
 }
 @media (max-width: 640px) {
   .nav-link { display: none; }
   .hero-title { font-size: 1.8rem; }
   .schools-grid { gap: 10px; }
   .school-chip { min-width: 120px; padding: 14px 16px; }
+  .album-section { padding: 56px 16px; }
+  .album-controls { gap: 10px; }
+  .album-dots { gap: 6px; }
+  .album-dot { width: 7px; height: 7px; }
 }
 </style>
 </head>
