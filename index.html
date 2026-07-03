@@ -598,8 +598,14 @@ footer {
   .hero-title { font-size: 1.8rem; }
   .schools-grid { gap: 10px; }
   .school-chip { min-width: 120px; padding: 14px 16px; }
-  .album-section { padding: 56px 16px; }
-  .album-controls { gap: 10px; }
+  /* アルバム：左右パディングをゼロにして全幅表示 */
+  .album-section { padding-left: 0; padding-right: 0; }
+  .album-inner { padding: 0; }
+  .album-section .centered { padding: 0 20px; }
+  .album-viewer { margin-top: 24px; }
+  .album-slides { border-radius: 0; box-shadow: none; }
+  .album-controls { padding: 0 16px; gap: 10px; margin-top: 14px; }
+  .album-caption { padding: 0 16px; }
   .album-dots { gap: 6px; }
   .album-dot { width: 7px; height: 7px; }
 }
